@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact – Alloggio Turistico Civitavecchia | Contatti – Alloggio Turistico Civitavecchia</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="en">
+  <nav class="navbar">
+    <a href="index-en.html">Home</a>
+    <a href="camere-en.html">Rooms</a>
+    <a href="servizi-en.html">Services</a>
+    <a href="galleria-en.html">Gallery</a>
+    <a href="dove-siamo-en.html">Location</a>
+    <a href="contatti-en.html">Contact</a>
+  </nav>
+  
+        
+<section class="contact-section">
+  <h2>Contact usContact Us</h2>
+  <p>Write to us for information, availability or custom requests. We will get back to you as soon as possible.</p>
+  <form action="mailto:example@email.com" method="POST" enctype="text/plain" class="contact-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    
+    <label>
+      <input type="checkbox" required>
+      I consent to the processing of data according to the <a href="privacy.html" target="_blank">Privacy Policy</a>
+    </label>
+
+<button type="submit">Send Message</button>
+  </form>
+  <p><strong>Phone:</strong> <a href="tel:+393925103069">+39 392 510 3069</a></p>
+  <p><strong>WhatsApp:</strong> <a href="https://wa.me/393925103069" target="_blank">Chatta ora</a></p>
+  <p><strong>Address:</strong> Via dei Poggi 1, Civitavecchia</p>
+</section>
+
+        
+  <footer>
+    <p>© 2025 Alloggio Turistico Civitavecchia</p>
+  </footer>
+
+<div id="cookie-banner" class="cookie-banner">
+  <p>Questo sito utilizza cookie tecnici per garantirne il corretto funzionamento. <a href="privacy.html">Leggi di più</a></p>
+  <button id="accept-cookies">Ok</button>
+</div>
+<script>
+  if (!localStorage.getItem('cookiesAccepted')) {{
+    document.getElementById('cookie-banner').style.display = 'block';
+  }}
+  document.getElementById('accept-cookies').onclick = function () {{
+    localStorage.setItem('cookiesAccepted', 'yes');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }};
+</script>
+
+</body>
+</html>

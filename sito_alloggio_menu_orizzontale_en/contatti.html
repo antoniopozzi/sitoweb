@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contatti – Alloggio Turistico Civitavecchia</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="camere.html">Camere</a>
+    <a href="servizi.html">Servizi</a>
+    <a href="galleria.html">Galleria</a>
+    <a href="dove-siamo.html">Dove siamo</a>
+    <a href="contatti.html">Contatti</a>
+  
+<div class="lang-select">
+  <select onchange="location = this.value;">
+    <option value="index.html">🇮🇹 Italiano</option>
+    <option value="index-en.html">🇬🇧 English</option>
+  </select>
+</div>
+
+</nav>
+  
+        
+<section class="contact-section">
+  <h2>Contattaci</h2>
+  <p>Scrivici per info, disponibilità o richieste personalizzate. Ti risponderemo il prima possibile!</p>
+  <form action="mailto:example@email.com" method="POST" enctype="text/plain" class="contact-form">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Messaggio:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    
+    <label>
+      <input type="checkbox" required>
+      Acconsento al trattamento dei dati secondo la <a href="privacy.html" target="_blank">Privacy Policy</a>
+    </label>
+
+<button type="submit">Invia messaggio</button>
+  </form>
+  <p><strong>Telefono:</strong> <a href="tel:+393925103069">+39 392 510 3069</a></p>
+  <p><strong>WhatsApp:</strong> <a href="https://wa.me/393925103069" target="_blank">Chatta ora</a></p>
+  <p><strong>Indirizzo:</strong> Via dei Poggi 1, Civitavecchia</p>
+</section>
+
+        
+  <footer>
+    <p>© 2025 Alloggio Turistico Civitavecchia</p>
+  </footer>
+
+<div id="cookie-banner" class="cookie-banner">
+  <p>Questo sito utilizza cookie tecnici per garantirne il corretto funzionamento. <a href="privacy.html">Leggi di più</a></p>
+  <button id="accept-cookies">Ok</button>
+</div>
+<script>
+  if (!localStorage.getItem('cookiesAccepted')) {{
+    document.getElementById('cookie-banner').style.display = 'block';
+  }}
+  document.getElementById('accept-cookies').onclick = function () {{
+    localStorage.setItem('cookiesAccepted', 'yes');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }};
+</script>
+
+
+<script>
+  document.querySelector(".contact-form")?.addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Grazie per averci contattato! Ti risponderemo il prima possibile.");
+  });
+</script>
+
+</body>
+</html>

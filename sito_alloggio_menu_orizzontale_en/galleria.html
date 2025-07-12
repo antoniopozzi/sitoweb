@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galleria – Alloggio Turistico Civitavecchia</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="camere.html">Camere</a>
+    <a href="servizi.html">Servizi</a>
+    <a href="galleria.html">Galleria</a>
+    <a href="dove-siamo.html">Dove siamo</a>
+    <a href="contatti.html">Contatti</a>
+  
+<div class="lang-select">
+  <select onchange="location = this.value;">
+    <option value="index.html">🇮🇹 Italiano</option>
+    <option value="index-en.html">🇬🇧 English</option>
+  </select>
+</div>
+
+</nav>
+
+  <section class="gallery">
+    <h2>Galleria Fotografica</h2>
+    <div class="grid">
+      
+    </div>
+  </section>
+
+  <div id="lightbox" class="lightbox">
+    <span id="lightbox-close" class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" />
+  </div>
+  <script>
+    document.querySelectorAll('.grid img').forEach(img => {
+      img.addEventListener('click', function () {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightbox.style.display = 'block';
+        lightboxImg.src = this.src;
+      });
+    });
+    document.getElementById('lightbox-close').onclick = function () {
+      document.getElementById('lightbox').style.display = "none";
+    };
+  </script>
+
+  <footer>
+    <p>© 2025 Alloggio Turistico Civitavecchia</p>
+  </footer>
+
+<div id="cookie-banner" class="cookie-banner">
+  <p>Questo sito utilizza cookie tecnici per garantirne il corretto funzionamento. <a href="privacy.html">Leggi di più</a></p>
+  <button id="accept-cookies">Ok</button>
+</div>
+<script>
+  if (!localStorage.getItem('cookiesAccepted')) {{
+    document.getElementById('cookie-banner').style.display = 'block';
+  }}
+  document.getElementById('accept-cookies').onclick = function () {{
+    localStorage.setItem('cookiesAccepted', 'yes');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }};
+</script>
+
+</body>
+</html>

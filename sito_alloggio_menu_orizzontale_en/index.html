@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home – Alloggio Turistico Civitavecchia</title>
+  <link rel="stylesheet" href="styles.css" />
+
+<script>
+  const userLang = navigator.language || navigator.userLanguage;
+  if (userLang.startsWith('en') && !location.pathname.includes('-en.html')) {
+    const newPath = location.pathname.replace('.html', '-en.html');
+    if (location.pathname !== '/index.html') {
+      location.href = newPath;
+    }
+  }
+</script>
+
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="camere.html">Camere</a>
+    <a href="servizi.html">Servizi</a>
+    <a href="galleria.html">Galleria</a>
+    <a href="dove-siamo.html">Dove siamo</a>
+    <a href="contatti.html">Contatti</a>
+  
+<div class="lang-select">
+  <select onchange="location = this.value;">
+    <option value="index.html">🇮🇹 Italiano</option>
+    <option value="index-en.html">🇬🇧 English</option>
+  </select>
+</div>
+
+</nav>
+  
+        <section class="hero">
+<h2>Benvenuti</h2>
+          <h1>Alloggio Turistico Civitavecchia</h1>
+          <p>Fino a 5 posti letto • A 200m dal mare • Zona residenziale</p>
+          <p>Contattaci per prenotazioni, informazioni o disponibilità diretta.</p>
+<a href="contatti.html" class="cta-button">📲 Contattaci per prenotare</a>
+        </section>
+        
+  <footer>
+    <p>© 2025 Alloggio Turistico Civitavecchia</p>
+  </footer>
+
+<div id="cookie-banner" class="cookie-banner">
+  <p>Questo sito utilizza cookie tecnici per garantirne il corretto funzionamento. <a href="privacy.html">Leggi di più</a></p>
+  <button id="accept-cookies">Ok</button>
+</div>
+<script>
+  if (!localStorage.getItem('cookiesAccepted')) {{
+    document.getElementById('cookie-banner').style.display = 'block';
+  }}
+  document.getElementById('accept-cookies').onclick = function () {{
+    localStorage.setItem('cookiesAccepted', 'yes');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }};
+</script>
+
+</body>
+</html>
